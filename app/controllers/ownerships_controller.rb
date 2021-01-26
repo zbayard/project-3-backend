@@ -14,3 +14,4 @@ class OwnershipsController < ApplicationController
     
     # !STRETCH GOAL- UPDATE AN OWNERSHIP
 end
+ 
