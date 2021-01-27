@@ -6,6 +6,7 @@ Rails.application.routes.draw do
 get '/users', to: 'users#index'
 post 'users', to: 'users#create'
 get 'users/:id', to: 'users#show'
+get 'users/:id/songs', to: 'users#songs'
 delete 'users/:id', to: 'users#destroy'
 
 

@@ -5,6 +5,11 @@ class UsersController < ApplicationController
         render json: users
     end
 
+    def songs
+        songs = User.find(params[:id]).songs
+        render json: songs
+    end
+
     def show
         user = User.find(params[:id])
         render json: user
