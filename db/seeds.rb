@@ -9,7 +9,7 @@ User.destroy_all
 Song.destroy_all
 
 6.times do 
-    Song.create(name: "zach's song", image: "https://picsum.photos/id/#{rand(200)}/200")
+    Song.create(name: Faker::Music::Prince.song, image: "https://picsum.photos/id/#{rand(200)}/200", genre: Faker::Music.genre)
 end
 
 4.times do 

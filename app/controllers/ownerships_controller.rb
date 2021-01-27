@@ -8,7 +8,7 @@ class OwnershipsController < ApplicationController
     private
 
     def ownership_params
-        params.require(:song_id, :user_id)
+        params.permit(:song_id, :user_id)
     end
 
     

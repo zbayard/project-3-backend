@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  # resources :recs
   # resources :ownerships
   # resources :songs
   # resources :users
@@ -15,6 +16,11 @@ delete '/songs/:id', to: 'songs#destroy'
 patch 'songs/:id', to: 'songs#update'
 
 post '/ownerships', to: 'ownerships#create'
+
+get '/recs', to: 'recs#index'
+post '/recs', to: 'recs#create'
+get 'recs/:id', to: 'recs#show'
+delete 'recs/:id', to: 'recs#destroy'
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
