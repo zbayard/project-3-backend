@@ -8,13 +8,18 @@
 User.destroy_all
 Song.destroy_all
 
-6.times do 
+20.times do 
     Song.create(name: Faker::Music::Prince.song, image: "https://picsum.photos/id/#{rand(200)}/200", genre: Faker::Music.genre)
 end
+
+
+User.create(name:'Gabe', age: 29, bio: 'dope')
 
 4.times do 
 User.create(name:Faker::Name.name, age: rand(65),bio: Faker::TvShows::MichaelScott.quote)
 end
 
+30.times do Ownership.create(user_id: User.all.shuffle.first.id, song_id: Song.all.shuffle.first.id)
+end
 puts 'Seeding accomplished, boys!'
 
