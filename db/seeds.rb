@@ -20,8 +20,10 @@ Song.create(name:"Propagation", artist:"Com Truise", genre:"Electronic", image:"
 
 
 User.create(name: 'Gabe', age: 29, bio: 'just okay')
+User.create(name: 'Zach', age: 25, bio: "I'm not cool, but I'm pretty decent.")
+User.create(name: 'Greg', age: 15, bio: 'Tech Entrepreneur')
 
-20.times do Ownership.create(user_id: User.all.shuffle.first.id, song_id: Song.all.shuffle.first.id)
+5.times do Ownership.create(user_id: User.all.shuffle.first.id, song_id: Song.all.shuffle.first.id)
 end
 puts 'Seeding accomplished, boys!'
 
